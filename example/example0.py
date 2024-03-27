@@ -22,8 +22,8 @@ SOFTWARE.
 ===============================================
 """
 
-from Quaternion import Quaternion as Q
-from Quaternion import XYZVector as V
+from quat import Quaternion as Q
+from quat import XYZVector as V
 
 g = 9.8 # gravitational acceleration
 
