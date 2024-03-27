@@ -1,34 +1,24 @@
-from setuptools import setup, find_packages
-import codecs
-import os
-
-here = os.path.abspath(os.path.dirname(__file__))
-
-with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
-    long_description = "\n" + fh.read()
-
-VERSION = '0.0.1'
-DESCRIPTION = 'A simple library for working with quaternions and vectors.'
-LONG_DESCRIPTION = 'This library is written by Geir Istad, aimed for working with vectors and quaternions obtained from IMU and DMP modules. I have simply made it available on PyPI.'
-
-# Setting up
+from distutils.core import setup
 setup(
-    name="quat",
-    version=VERSION,
-    author="Majid Alekasir",
-    author_email="<majid.alekasir@gmail.com>",
-    description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=long_description,
-    packages=find_packages(),
-    install_requires=[],
-    keywords=['python', 'quaternion', 'vector', 'XYZVector', 'IMU', 'DMP'],
-    classifiers=[
-        "Development Status :: 1 - Planning",
-        "Intended Audience :: Developers",
-        "Programming Language :: Python :: 3",
-        "Operating System :: Unix",
-        "Operating System :: MacOS :: MacOS X",
-        "Operating System :: Microsoft :: Windows",
-    ]
+  name = 'quat',         # How you named your package folder (MyLib)
+  packages = ['quat'],   # Chose the same as "name"
+  version = '0.0.1',      # Start with a small number and increase it with every change you make
+  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
+  description = 'A simple library for working with quaternions and vectors.',   # Give a short description about your library
+  author = 'Majid Alekasir',                   # Type in your name
+  author_email = 'majid.alekasir@gmail.com',      # Type in your E-Mail
+  url = 'https://github.com/OmidAlek/quat.git',   # Provide either the link to your github or to your website
+  download_url = 'https://github.com/OmidAlek/quat/archive/refs/tags/v_001.tar.gz',    # I explain this later on
+  keywords = ['python', 'quaternion', 'vector', 'XYZVector', 'IMU', 'DMP'],   # Keywords that define your package best
+  install_requires=[],
+  classifiers=[
+    'Development Status :: 5 - Production/Stable',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
+    'Intended Audience :: Developers',      # Define that your audience are developers
+    'Topic :: Software Development :: Build Tools',
+    'License :: OSI Approved :: MIT License',   # Again, pick a license
+    'Programming Language :: Python :: 3',      #Specify which pyhton versions that you want to support
+    'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+  ],
 )
