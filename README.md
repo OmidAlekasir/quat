@@ -4,7 +4,9 @@ This library is primarily derived from the contributions of Geir Istad and has b
 
 To install this package, execute the following command:
 
-`pip install quat`
+```
+pip install quat
+```
 
 ## Library Structure and Functions
 * Quaternion:
